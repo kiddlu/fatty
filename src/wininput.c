@@ -791,6 +791,7 @@ win_key_down(WPARAM wp, LPARAM lp)
       else app_pad_code(key - VK_NUMPAD0 + '0');
     when 'A' ... 'Z' or ' ':
       if (key != ' ' && alt_code_key(key - 'A' + 0xA));
+      else if (ctrl && key == 'V') win_paste();
       else if (shift && ctrl && key == 'T') win_tab_create();
       else if (shift && ctrl && key == 'W') child_terminate(active_term->child);
       else if (shift && ctrl && key == 'A') {term_select_all(active_term); win_update();}
