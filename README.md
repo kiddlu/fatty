@@ -19,7 +19,7 @@ using tabs.
 If you find bugs (there are probably many), you may report them on Github or
 send pull requests
 
-###Installing
+### Installing
 
 To install, run cygwin setup\*.exe and have at least following packages marked for
 install:
@@ -42,7 +42,9 @@ Then you probably want to create shortcut to your Windows desktop to run fatty.
 After that, you have decent terminal with tabs for your Cygwin!
 
 To spawn a new tab, for example in a desktop shortcut, use `fatty -b "source $HOME/.bashrc; uname -a; exec bash"`.
-You can spawn multiple tabs. Always execute bash (or other shell of your choice).
+You can spawn multiple tabs by providing `-b` option multiple times
+(`fatty -b "commands for tab 1" -b "commands for tab 2" ...`). Always
+execute bash (or other shell of your choice).
 
 You might also want to remove the line `cd "${HOME}"` from `/etc/profile` (if
 there are such line) if you want your new tabs to open same directory as your
